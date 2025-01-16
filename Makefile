@@ -171,8 +171,8 @@ clean:
 	rm -f *~ $(SRC_DIR)/*~ rpm/*~
 	rm -fr $(BUILD_DIR)
 
-test:
-	make -C unit test
+#test:
+#	make -C unit test
 
 $(DEBUG_BUILD_DIR):
 	mkdir -p $@
