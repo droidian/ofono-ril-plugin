@@ -1,0 +1,31 @@
+Source: ofono-ril-plugin
+Section: libs
+Priority: optional
+Maintainer: Alexander Rutz <alex@familyrutz.com>
+XSBC-Original-Maintainer: Slava Monich <slava.monich@jolla.com>
+Rules-Requires-Root: no
+Build-Depends:
+	debhelper-compat (= 13),
+	libglib2.0-dev (>= 2.0),
+	libgbinder-dev (>= 1.1.29),
+	libgbinder-radio-dev (>= 1.5.3),
+	libglibutil-dev (>= 1.0.61),
+	libmce-glib-dev (>= 1.0.6),
+	ofono-dev (>= 1.29),
+	libgrilio-dev,
+Standards-Version: 4.7.0
+Homepage: https://github.com/mer-hybris/ofono-ril-plugin
+#Vcs-Browser: https://github.com/droidian/ofono-ril-plugin
+#Vcs-Git: https://github.com/droidian/ofono-ril-plugin.git
+
+Package: ofono-ril-plugin
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ ofono-ril-binder-plugin,
+Description: Legacy plugin for integrating ofono with Android adaptations that
+ support RIL sockets.
+ RIL sockets disappeared in Android 8 and have been replaced with
+ IRadio family of binder interfaces.

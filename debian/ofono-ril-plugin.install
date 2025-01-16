@@ -1,0 +1,2 @@
+ril_subscription.conf /etc/ofono/
+10-ofono-ril.conf /usr/lib/systemd/system/ofono.service.d/
